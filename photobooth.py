@@ -248,31 +248,31 @@ class Photobooth:
 
         # Image 0
         img = Image.open(input_filenames[0])
-        img.thumbnail(thumb_size)
-        offset = ( thumb_box[0] - inner_border - img.size[0] ,
-                   thumb_box[1] - inner_border - img.size[1] )
+        img.thumbnail(image_size)
+        offset = ( 0 ,
+                   0 )
         output_image.paste(img, offset)
 
         # Image 1
-        img = Image.open(input_filenames[1])
-        img.thumbnail(thumb_size)
-        offset = ( thumb_box[0] + inner_border,
-                   thumb_box[1] - inner_border - img.size[1] )
-        output_image.paste(img, offset)
+        #img = Image.open(input_filenames[1])
+        #img.thumbnail(thumb_size)
+        #offset = ( thumb_box[0] + inner_border,
+        #           thumb_box[1] - inner_border - img.size[1] )
+        #output_image.paste(img, offset)
 
         # Image 2
-        img = Image.open(input_filenames[2])
-        img.thumbnail(thumb_size)
-        offset = ( thumb_box[0] - inner_border - img.size[0] ,
-                   thumb_box[1] + inner_border )
-        output_image.paste(img, offset)
+        #img = Image.open(input_filenames[2])
+        #img.thumbnail(thumb_size)
+        #offset = ( thumb_box[0] - inner_border - img.size[0] ,
+        #           thumb_box[1] + inner_border )
+        #output_image.paste(img, offset)
 
         # Image 3
-        img = Image.open(input_filenames[3])
-        img.thumbnail(thumb_size)
-        offset = ( thumb_box[0] + inner_border ,
-                   thumb_box[1] + inner_border )
-        output_image.paste(img, offset)
+        #img = Image.open(input_filenames[3])
+        #img.thumbnail(thumb_size)
+        #offset = ( thumb_box[0] + inner_border ,
+        #           thumb_box[1] + inner_border )
+        #output_image.paste(img, offset)
 
         # Save assembled image
         output_filename = self.pictures.get_next()
